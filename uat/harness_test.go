@@ -49,7 +49,7 @@ func runTests(m *testing.M) int {
 		return 1
 	}
 	sutTempDir = tempDir
-	defer os.RemoveAll(sutTempDir)
+	defer func() { _ = os.RemoveAll(sutTempDir) }()
 
 	binPath := filepath.Join(sutTempDir, "moneytracker")
 
