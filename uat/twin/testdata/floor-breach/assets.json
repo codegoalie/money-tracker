@@ -1,0 +1,20 @@
+{
+  "assets": [
+    {
+      "id": 1,
+      "name": "Everyday Checking",
+      "type_name": "checking",
+      "balance": "1800.00",
+      "to_base": 1800.00,
+      "currency": "usd"
+    },
+    {
+      "id": 2,
+      "name": "Thin Savings",
+      "type_name": "savings",
+      "balance": "600.00",
+      "to_base": 600.00,
+      "currency": "usd"
+    }
+  ]
+}

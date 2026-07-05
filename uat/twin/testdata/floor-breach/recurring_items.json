@@ -1,0 +1,43 @@
+[
+  {
+    "id": 20,
+    "payee": "Modest Employer Payroll",
+    "amount": "1400.00",
+    "to_base": 1400.00,
+    "is_income": true,
+    "granularity": "weekly",
+    "quantity": 2,
+    "occurrences": {
+      "2026-07-10": "1400.00",
+      "2026-07-24": "1400.00",
+      "2026-08-07": "1400.00",
+      "2026-08-21": "1400.00"
+    }
+  },
+  {
+    "id": 21,
+    "payee": "Downtown Mortgage Co.",
+    "amount": "2600.00",
+    "to_base": -2600.00,
+    "is_income": false,
+    "granularity": "monthly",
+    "quantity": 1,
+    "occurrences": {
+      "2026-07-01": "-2600.00",
+      "2026-08-01": "-2600.00"
+    }
+  },
+  {
+    "id": 22,
+    "payee": "Auto Loan Servicer",
+    "amount": "650.00",
+    "to_base": -650.00,
+    "is_income": false,
+    "granularity": "monthly",
+    "quantity": 1,
+    "occurrences": {
+      "2026-07-15": "-650.00",
+      "2026-08-15": "-650.00"
+    }
+  }
+]

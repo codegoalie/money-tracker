@@ -1,0 +1,12 @@
+{
+  "plaid_accounts": [
+    {
+      "id": 3,
+      "name": "High Balance Credit Card",
+      "type": "credit",
+      "balance": "400.00",
+      "to_base": -400.00,
+      "currency": "usd"
+    }
+  ]
+}
