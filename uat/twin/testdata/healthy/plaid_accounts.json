@@ -1,0 +1,12 @@
+{
+  "plaid_accounts": [
+    {
+      "id": 3,
+      "name": "Rewards Credit Card",
+      "type": "credit",
+      "balance": "1230.00",
+      "to_base": -1230.00,
+      "currency": "usd"
+    }
+  ]
+}

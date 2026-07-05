@@ -1,0 +1,43 @@
+[
+  {
+    "id": 10,
+    "payee": "Acme Employer Payroll",
+    "amount": "3100.00",
+    "to_base": 3100.00,
+    "is_income": true,
+    "granularity": "weekly",
+    "quantity": 2,
+    "occurrences": {
+      "2026-07-10": "3100.00",
+      "2026-07-24": "3100.00",
+      "2026-08-07": "3100.00",
+      "2026-08-21": "3100.00"
+    }
+  },
+  {
+    "id": 11,
+    "payee": "Maple Street Apartments",
+    "amount": "1450.00",
+    "to_base": -1450.00,
+    "is_income": false,
+    "granularity": "monthly",
+    "quantity": 1,
+    "occurrences": {
+      "2026-07-01": "-1450.00",
+      "2026-08-01": "-1450.00"
+    }
+  },
+  {
+    "id": 12,
+    "payee": "Streamflix Subscription",
+    "amount": "15.99",
+    "to_base": -15.99,
+    "is_income": false,
+    "granularity": "monthly",
+    "quantity": 1,
+    "occurrences": {
+      "2026-07-05": "-15.99",
+      "2026-08-05": "-15.99"
+    }
+  }
+]
