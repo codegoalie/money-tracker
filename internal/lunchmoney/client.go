@@ -9,6 +9,7 @@
 package lunchmoney
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -58,13 +59,17 @@ func New(baseURL, token string, opts ...Option) *Client {
 // get issues an authenticated GET request against path (which must start
 // with "/", e.g. "/v1/me") with the given raw query string (may be empty),
 // and decodes a 200 JSON response body into out.
-func (c *Client) get(path, rawQuery string, out any) error {
+//
+// It uses http.NewRequestWithContext, so a cancelled or timed-out ctx aborts
+// the request promptly: the underlying transport error is wrapped and
+// returned rather than left to hang.
+func (c *Client) get(ctx context.Context, path, rawQuery string, out any) error {
 	u := c.baseURL + path
 	if rawQuery != "" {
 		u += "?" + rawQuery
 	}
 
-	req, err := http.NewRequest(http.MethodGet, u, nil)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u, nil)
 	if err != nil {
 		return fmt.Errorf("lunchmoney: building request for %s: %w", path, err)
 	}

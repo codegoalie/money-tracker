@@ -42,7 +42,7 @@ type assetsResponse struct {
 // GetAssets fetches all manually-tracked/synced assets from GET /v1/assets.
 func (c *Client) GetAssets(ctx context.Context) ([]Asset, error) {
 	var resp assetsResponse
-	if err := c.get("/v1/assets", "", &resp); err != nil {
+	if err := c.get(ctx, "/v1/assets", "", &resp); err != nil {
 		return nil, err
 	}
 

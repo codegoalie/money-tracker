@@ -43,7 +43,7 @@ type plaidAccountsResponse struct {
 // GET /v1/plaid_accounts.
 func (c *Client) GetPlaidAccounts(ctx context.Context) ([]PlaidAccount, error) {
 	var resp plaidAccountsResponse
-	if err := c.get("/v1/plaid_accounts", "", &resp); err != nil {
+	if err := c.get(ctx, "/v1/plaid_accounts", "", &resp); err != nil {
 		return nil, err
 	}
 

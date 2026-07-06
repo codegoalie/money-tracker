@@ -79,7 +79,7 @@ func (c *Client) GetRecurringItems(ctx context.Context, startDate, endDate time.
 	q.Set("end_date", endDate.Format(dateQueryLayout))
 
 	var wireItems []recurringItemWire
-	if err := c.get("/v1/recurring_items", q.Encode(), &wireItems); err != nil {
+	if err := c.get(ctx, "/v1/recurring_items", q.Encode(), &wireItems); err != nil {
 		return nil, err
 	}
 

@@ -15,7 +15,7 @@ type Me struct {
 // GetMe fetches the authenticated user's profile from GET /v1/me.
 func (c *Client) GetMe(ctx context.Context) (*Me, error) {
 	var me Me
-	if err := c.get("/v1/me", "", &me); err != nil {
+	if err := c.get(ctx, "/v1/me", "", &me); err != nil {
 		return nil, err
 	}
 	return &me, nil
