@@ -77,7 +77,7 @@ func (c *Client) get(path, rawQuery string, out any) error {
 	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
-		return fmt.Errorf("lunchmoney: request to %s returned unexpected status %d", path, resp.StatusCode)
+		return newAPIError(resp)
 	}
 
 	if err := json.NewDecoder(resp.Body).Decode(out); err != nil {
