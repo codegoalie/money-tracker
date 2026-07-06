@@ -1,0 +1,14 @@
+[
+  {
+    "id": 10,
+    "payee": "Acme Employer Payroll",
+    "amount": "not-a-number",
+    "to_base": 3100.00,
+    "is_income": true,
+    "granularity": "weekly",
+    "quantity": 2,
+    "occurrences": {
+      "2026-07-10": "3100.00"
+    }
+  }
+]
