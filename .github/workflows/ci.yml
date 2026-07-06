@@ -34,7 +34,7 @@ jobs:
           cache-dependency-path: "**/go.sum"
       - name: run acceptance suite
         working-directory: uat
-        run: go test -race -count=1 ./...
+        run: go test -race -count=1 -v ./...
 
   lint:
     runs-on: ubuntu-latest
