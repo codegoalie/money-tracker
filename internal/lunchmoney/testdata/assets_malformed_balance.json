@@ -1,0 +1,12 @@
+{
+  "assets": [
+    {
+      "id": 1,
+      "name": "Everyday Checking",
+      "type_name": "checking",
+      "balance": "not-a-number",
+      "to_base": 7000.00,
+      "currency": "usd"
+    }
+  ]
+}
