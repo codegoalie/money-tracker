@@ -108,8 +108,7 @@ func runSUT(t *testing.T, twinURL, token string, args ...string) (exitCode int, 
 		return 0, outBuf.String(), errBuf.String()
 	}
 
-	var exitErr *exec.ExitError
-	if errors.As(err, &exitErr) {
+	if exitErr, ok := errors.AsType[*exec.ExitError](err); ok {
 		return exitErr.ExitCode(), outBuf.String(), errBuf.String()
 	}
 
